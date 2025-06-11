@@ -1,6 +1,6 @@
 <#
   .SYNOPSIS
-   Retrieves active session details for a specified AD user across all domain-joined servers.
+   Retrieves session details for a specified AD user across all domain-joined servers.
 
   .DESCRIPTION
    This module checks the connectivity status of each domain-joined server, and if the server is online, 
@@ -29,8 +29,6 @@
      - Run this module either in DC or RSAT server.
 
  .OUTPUT
-  PSCustomObject
-
   Return PSCustomObject contain session details such as ServerName, SessionID,State,LogonTime
 
   .NOTES
