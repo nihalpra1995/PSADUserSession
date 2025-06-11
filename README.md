@@ -23,4 +23,4 @@ PSCustomObject
 Return PSCustomObject contain session details of user such as ServerName, SessionID,State,LogonTime
 
 ## Exception
-[Click here for Exception Information] (https://github.com/nihalpra1995/PSADUserSession/blob/main/EXCEPTIONS_INFO.md)
+[Click here for Exception Information](https://github.com/nihalpra1995/PSADUserSession/blob/main/EXCEPTIONS_INFO.md)
