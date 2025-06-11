@@ -12,6 +12,19 @@ Install-Module -Name PSADUserSession
 1.Run powershell as administrator.  
 2.To ensure accurate and complete output, the user executing this module must have **Domain Admin** privileges or be a member of the **Local Administrators** or **Remote Desktop Users** group on all domain-joined servers.Insufficient privileges may result in incomplete or inconsistent results.
 
+## Parameter
+```
+**-identity**
+Specifies SamAccountName of the AD user you are searching for.
+This parameter is mandatory.
+```
+
+```
+**-searchbase**
+Specifies Active Directory path where the search should begin.
+This parameter is optional. If not specified, the command searches session information across all domain-joined servers.
+```
+
 ## Usage
 ```PowerShell
 #UserSession details accross all the domain-joined servers.
