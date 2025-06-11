@@ -30,7 +30,7 @@ Author = 'Nihal Prasad'
 Copyright = '(c) 2025 Nihal Prasad. All rights reserved.'
 
 # Description of the functionality provided by this module
-Description = 'Retrieves active session details for a specified AD user across all domain-joined servers.'
+Description = 'Retrieves session details for a specified AD user across all domain-joined servers.'
 
 # Minimum version of the Windows PowerShell engine required by this module
 # PowerShellVersion = ''
