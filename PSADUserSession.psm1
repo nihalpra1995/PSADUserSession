@@ -9,34 +9,42 @@
    No workstations will be included (List Could be BIG in larger environment)
 
   .PARAMETER identity
-   SamAccountName of the AD user you are searching for.
+   Specifies SamAccountName of the AD user you are searching for.
    This parameter is mandatory.
 
   .PARAMETER searchbase
    Specifies Active Directory path where the search should begin.
    This parameter is optional. If not specified, the command searches session information across all domain-joined servers.
 
-  .EXAMPLES
+  .EXAMPLE
    Get-ADUserSession -identity "testuser001"
    search user session of testuser001 in all the domain-joined servers.
    
-  .EXAMPLES
+  .EXAMPLE
    Get-ADUserSession -identity "testuser001" -searchbase "OU=AppServers,DC=domaintest,DC=com"
    search user session of testuser001 in domain-joined servers present in Appservers OU only.
 
-  .REQUIREMENTS
-     - Run as Administrator is mandatory.
-     - Run this module either in DC or RSAT server.
+ .OUTPUTS
+  Return PSCustomObject contain session details of user such as ServerName, SessionID,State,LogonTime
+ 
+ .NOTES
+   1.Parameter identity
+   Specifies SamAccountName of the AD user you are searching for.
+   This parameter is mandatory.
 
- .OUTPUT
-  Return PSCustomObject contain session details such as ServerName, SessionID,State,LogonTime
+   2.Parameter searchbase
+   Specifies Active Directory path where the search should begin.
+   This parameter is optional. If not specified, the command searches session information across all domain-joined servers.
+  
+   3.Requirement
+    - Run as administrator.
+    - To ensure accurate and complete output, the user executing this module must have Domain Admin privileges 
+      or be a member of the Local Administrators or Remote Desktop Users group on all domain-joined servers.
+      Insufficient privileges may result in incomplete or inconsistent results
+    
 
-  .NOTES
-   Author: Nihal Prasad
-   Created: 06/10/25
-   Version: 1.1.0
-
-
+ .LINK
+   https://github.com/nihalpra1995/PSADUserSession/blob/main/README.md
  #>
 
 Function Get-ADUserSession
