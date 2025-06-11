@@ -19,7 +19,6 @@ Get-ADUserSession -identity "<samaccountname>" -searchbase "OU=<OU Name>,DC=<dom
 ```
 
 ## Output
-PSCustomObject
 Return PSCustomObject contain session details of user such as ServerName, SessionID,State,LogonTime
 
 ## Exception
