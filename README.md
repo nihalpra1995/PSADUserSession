@@ -14,13 +14,13 @@ Install-Module -Name PSADUserSession
 
 ## Parameter
 ```
-**-identity**
+-identity
 Specifies SamAccountName of the AD user you are searching for.
 This parameter is mandatory.
 ```
 
 ```
-**-searchbase**
+-searchbase
 Specifies Active Directory path where the search should begin.
 This parameter is optional. If not specified, the command searches session information across all domain-joined servers.
 ```
